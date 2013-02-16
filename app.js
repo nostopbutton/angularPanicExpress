@@ -5,8 +5,7 @@
 
 var express = require('express'),
     routes = require('./routes'),
-    api = require('./routes/api'),
-    port = process.env.PORT || 3000;
+    api = require('./routes/api');;
 
 var app = module.exports = express();
 
@@ -61,7 +60,6 @@ app.get('/api/name', api.name);
 app.get('*', routes.index);
 
 // Start server
-
-app.listen(port, function(){
+app.listen(process.env.PORT || 3000, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
