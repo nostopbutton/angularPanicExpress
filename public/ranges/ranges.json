@@ -1,0 +1,25 @@
+[
+    {
+        "id": "coco",
+        "name": "Classic Coco",
+        "blurb": "It's lovely, you know it is...",
+        "price": 1600,
+        "image": "img/dress/2.2-nolegs-front.png"
+    },
+    {
+        "id": "potatosack",
+        "name": "Potato Sack",
+        "blurb": "They're hot this winter, you could be too!",
+        "price": 2400,
+        "image": "img/PotatoSack1.png"
+    },
+    {
+        "id": "empress",
+        "name": "The Empress' New Dress",
+        "blurb": "They'll all be staring at you as you strut your stuff",
+        "price": 1000,
+        "image": "img/Empress.png"
+    }
+
+
+]

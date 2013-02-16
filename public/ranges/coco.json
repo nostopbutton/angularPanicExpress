@@ -1,0 +1,89 @@
+{
+
+    "title": "CLASSIC COCO RANGE",
+    "price": 1600,
+    "strapline": "use the buttons below to customise your dress",
+    "sizes": [1,2,3,4,5],
+    "views": ["front", "left", "back", "right"],
+
+    "default": {
+        "view": "front",
+
+        "bodice": {
+            "type": "bodice-01",
+            "fabric": "c01"
+        },
+        "skirt": {
+            "type": "skirt-01",
+            "fabric": "c01"
+        },
+        "sleeves": {
+            "type": "sleeves-01",
+            "fabric": "c01"
+        },
+        "belt": {
+            "type": "belt-01",
+            "fabric": "c03"
+        }
+     },
+
+    "bodice": [
+        {"name": "bodice-01", "type": "bodice-01"},
+        {"name": "bodice-02", "type": "bodice-02"},
+        {"name": "bodice-03", "type": "bodice-03"},
+        {"name": "bodice-04", "type": "bodice-04"},
+        {"name": "bodice-05", "type": "bodice-05"},
+        {"name": "bodice-06", "type": "bodice-06"},
+        {"name": "bodice-07", "type": "bodice-07"},
+        {"name": "bodice-08", "type": "bodice-08"}
+    ],
+    "bodice_fabric": [
+        {"name": "red",     "type": "c01"},
+        {"name": "blue",    "type": "c02"},
+        {"name": "black",   "type": "c03"},
+        {"name": "green",   "type": "c04"}
+    ],
+
+    "skirt": [
+        {"name": "skirt-01", "type": "skirt-01"},
+        {"name": "skirt-02", "type": "skirt-02"},
+        {"name": "skirt-03", "type": "skirt-03"},
+        {"name": "skirt-04", "type": "skirt-04"},
+        {"name": "skirt-05", "type": "skirt-05"},
+        {"name": "skirt-06", "type": "skirt-06"}
+    ],
+    "skirt_fabric": [
+        {"name": "red",     "type": "c01"},
+        {"name": "blue",    "type": "c02"},
+        {"name": "black",   "type": "c03"},
+        {"name": "green",   "type": "c04"}
+    ],
+    "sleeves": [
+        {"name": "sleeves-00", "type": "sleeves-00"},
+        {"name": "sleeves-01", "type": "sleeves-01"},
+        {"name": "sleeves-02", "type": "sleeves-02"},
+        {"name": "sleeves-03", "type": "sleeves-03"},
+        {"name": "sleeves-04", "type": "sleeves-04"},
+        {"name": "sleeves-05", "type": "sleeves-05"},
+        {"name": "sleeves-06", "type": "sleeves-06"},
+        {"name": "sleeves-07", "type": "sleeves-07"}
+    ],
+    "sleeves_fabric": [
+        {"name": "red",     "type": "c01"},
+        {"name": "blue",    "type": "c02"},
+        {"name": "black",   "type": "c03"},
+        {"name": "green",   "type": "c04"}
+    ],
+
+    "belt": [
+        {"name": "belt-00", "type": "belt-00"},
+        {"name": "belt-01", "type": "belt-01"}
+    ],
+    "belt_fabric": [
+        {"name": "red",     "type": "c01"},
+        {"name": "blue",    "type": "c02"},
+        {"name": "black",   "type": "c03"},
+        {"name": "green",   "type": "c04"}
+    ]
+
+}
