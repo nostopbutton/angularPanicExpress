@@ -5,7 +5,11 @@
 
 var express = require('express'),
     routes = require('./routes'),
-    api = require('./routes/api');;
+    api = require('./routes/api'),
+    gzippo = require('gzippo');
+
+
+
 
 var app = module.exports = express();
 
@@ -35,7 +39,10 @@ app.configure(function(){
 
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(express.static(__dirname + '/public'));
+    // Replace the default express static provider with gzippo's (see: http://tomg.co/gzippo)
+//  app.use(express.static(__dirname + '/public'));
+    app.use(gzippo.staticGzip(__dirname + '/public'));
+
   app.use(app.router);
 });
 
