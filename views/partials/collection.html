@@ -1,0 +1,57 @@
+<div id="buyModal" class="modal hide fade smallModal">
+    <form id="review-form" action="/review" method="post" class="form-horizontal">
+        <div class="modal-header">
+            <a data-dismiss="modal" class="close"></a>
+            <h3>Review my design</h3>
+        </div>
+        <div class="modal-body">
+            <div class="design-list">
+
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#" data-dismiss="modal" class="btn">Close</a>
+            <button class="btn btn-primary" type="submit">Add to bag &raquo;</button>
+            <a class="btn" href="#/design/{{range.id}}">Customize!</a>
+        </div>
+    </form>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="span11 offset1">
+            <div ng-repeat="range in ranges">
+                <div class="span3">
+                    <div class="row">
+                        <div class="span2">
+                            {{range.name}}
+                        </div>
+                        <div class="span1 pull-right">
+                            <b>HKD {{range.price}}</b>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span3 overview blurb">
+                            <p class="handwriting top-border"><i>{{range.blurb}}</i></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span3 overview image">
+                                <a href="#buyModal"> <img ng-src="{{range.image}}" height="307px"></a>
+                            <!--</div>-->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span3 overview buttons">
+                            <!--<div class="overview buttons">-->
+                                <a class="btn" id="buy-dress" data-toggle="modal" href="#buyModal">Buy off the shelf</a>
+                                <a class="btn" id="customize-dress" href="#/design/{{range.id}}">Customize!</a>
+                            <!--</div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- /container -->
+

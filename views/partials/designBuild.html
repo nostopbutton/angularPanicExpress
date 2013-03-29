@@ -1,0 +1,209 @@
+<div class="container" id="test">
+<div id="content">
+<div class="row">
+    <div class="span3 offset6">
+        {{range.title}}
+    </div>
+    <div class="span1 pull-right">
+        <b>HKD {{range.price}}</b>
+    </div>
+</div>
+<div class="row">
+    <div class="span6 offset6">
+        <p class="handwriting top-border"><i>{{range.strapline}}</i></p>
+    </div>
+</div>
+<div class="row">
+    <div>
+        <div class="span1">
+            <fieldset name="view_choice" form="selection_form"ng-cloak  >
+                        <span ng-repeat="view in range.views">
+                            <input type="radio" ng-model="form.view" ui-jq="button" name="view_choice" id="{{view}}" value="{{view}}" ng-cloak>
+                            <!--<label for="{{view}}" ng-cloak><img ng-src="img/dress/2.2-view-{{view}}.png" class="selector option"ng-cloak></label>-->
+                            <!--<label for="{{view}}" ng-cloak><span class="icons-sprite {{view}}"></span></label>-->
+                            <label for="{{view}}"><span class="icons-sprite {{view}}"></span></label>
+
+                        </span>
+            </fieldset>
+            <table border="1">
+                <tbody class="dresselement-list">
+                </tbody>
+            </table>
+            <br><br><br> <br> <br>  <!-- TODO - remove this and do the vertical spacing properly -->
+        </div>
+        <div class="span5">
+            <div class="tabbable tabs-below"> <!-- Only required for left/right tabs -->
+                <div class="tab-content span4 offset1">
+                    <div class="tab-pane active" id="tab-main">
+                            <div class="dress">
+                                <div class="pic body body-sprite body-001"></div>
+                                <!--<span class="dress-sprite {{bodice.type}}-{{bodice_fabric.type}}"></span>-->
+                                <div class="sleeves"><div class="pic dress-sprite {{form.sleeves.type}}-{{form.sleeves.fabric}}"></div></div>
+                                <div class="skirt"><div class="pic dress-sprite {{form.skirt.type}}-{{form.skirt.fabric}}"></div></div>
+                                <div class="bodice"><div class="pic dress-sprite {{form.bodice.type}}-{{form.bodice.fabric}}"></div></div>
+                                <div class="belt"><div class="pic dress-sprite {{form.belt.type}}-{{form.belt.fabric}}"></div></div>
+                            </div>
+                    </div>
+                    <div class="tab-pane" id="tab-legs">
+                            <div class="dress">
+                                <!--<div class="body"><img class="pic body {{form.view}}" ui-animate ng-src="img/dress/2.2-view-{{form.view}}.png"></div>-->
+                                <div class="body"><div class="pic dress-sprite "></div></div>
+
+                            </div>
+                    </div>
+                    <div class="tab-pane" id="tab-nolegs">
+                        <div class="dress">
+                            <!--<div class="body"><img class="pic body {{form.view}}" ng-src="img/dress/2.2-nolegs-{{form.view}}.png"></div>-->
+                            <div class="body"><img class="pic body {{form.view}}" ng-src="img/dress/2.2-nolegs-{{form.view}}.png"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="span6">
+            <form id="selection_form"/>
+            <div class="tabbable tabs-left">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tab-bodice" data-toggle="tab">bodice</a></li>
+                    <li><a href="#tab-skirt" data-toggle="tab">skirt</a></li>
+                    <li><a href="#tab-sleeves" data-toggle="tab">sleeves</a></li>
+                    <li><a href="#tab-belt" data-toggle="tab">belt</a></li>
+                    <li><a href="#tab-extras" data-toggle="tab">extras</a></li>
+                    <li><a href="#tab-sizing" data-toggle="tab">sizing</a></li>
+                </ul>
+                <div class="tab-content">
+                     <!--TODO - turn this repeating set into a function -->
+                    <div class="tab-pane active" id="tab-bodice">
+                        <div class="span3">
+                            <fieldset name="bodice_choice" form="selection_form">
+                                <span ng-repeat="bodice in range.bodice">
+                                    <input type="radio" ng-model="form.bodice.type" ui-jq="button" name="bodice_choice" id="{{bodice.type}}" value="{{bodice.type}}">
+                                    <!--<label ng-model="form.bodice.type" for="{{bodice.name}}"><img ng-src="img/2.3-{{bodice.name}}.png" class="selector option"></label>-->
+                                    <label ng-model="form.bodice.type" for="{{bodice.type}}"><div class="icons-sprite {{bodice.type}}"></div></label>
+
+                                </span>
+                            </fieldset>
+                        </div>
+                        <div class="span1">
+                            <fieldset name="bodice_fabric_choice" form="selection_form">
+                                <span ng-repeat="bodice_fabric in range.bodice_fabric">
+                                    <input type="radio" ng-model="form.bodice.fabric" ui-jq="button" name="bodice_fabric_choice" id="bodice_{{bodice_fabric.type}}" value="{{bodice_fabric.type}}">
+                                    <label for="bodice_{{bodice_fabric.type}}"><img class="selector option fabric{{bodice_fabric.type}}"></label>
+                                </span>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab-skirt">
+                        <div class="span3">
+                            <fieldset name="skirt_choice" form="selection_form">
+                                <span ng-repeat="skirt in range.skirt">
+                                    <input type="radio" ng-model="form.skirt.type" ui-jq="button" name="skirt_choice" id="{{skirt.type}}" value="{{skirt.name}}">
+                                    <!--<label for="{{skirt.name}}"><img ng-src="img/2.3-{{skirt.name}}.png" class="selector option"></label>-->
+                                    <label ng-model="form.skirt.type" for="{{skirt.type}}"><div class="icons-sprite {{skirt.type}}"></div></label>
+                                </span>
+                            </fieldset>
+                        </div>
+                        <div class="span1">
+                            <fieldset name="skirt_fabric_choice" form="selection_form">
+                                <span ng-repeat="skirt_fabric in range.skirt_fabric">
+                                    <input type="radio" ng-model="form.skirt.fabric" ui-jq="button" name="skirt_fabric_choice" id="skirt_{{skirt_fabric.type}}" value="{{skirt_fabric.type}}">
+                                    <label for="skirt_{{skirt_fabric.type}}"><img class="selector option fabric{{skirt_fabric.type}}"></label>
+                                </span>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab-sleeves">
+                        <div class="span3">
+                            <fieldset name="sleeves_choice" form="selection_form">
+                                <span ng-repeat="sleeves in range.sleeves">
+                                    <input type="radio" ng-model="form.sleeves.type" ui-jq="button" name="sleeves_choice" id="{{sleeves.type}}" value="{{sleeves.name}}">
+                                    <!--<label for="{{sleeves.name}}"><img ng-src="img/2.3-{{sleeves.name}}.png" class="selector option"></label>-->
+                                    <label ng-model="form.sleeves.type" for="{{sleeves.type}}"><div class="icons-sprite {{sleeves.type}}"></div></label>
+                                </span>
+                            </fieldset>
+                        </div>
+                        <div class="span1">
+                            <fieldset name="sleeves_fabric_choice" form="selection_form">
+                                <span ng-repeat="sleeves_fabric in range.sleeves_fabric">
+                                    <input type="radio" ng-model="form.sleeves.fabric" ui-jq="button" name="sleeves_fabric_choice" id="sleeves_{{sleeves_fabric.type}}" value="{{sleeves_fabric.type}}">
+                                    <label for="sleeves_{{sleeves_fabric.type}}"><img class="selector option fabric{{sleeves_fabric.type}}"></label>
+                                </span>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab-belt">
+                        <div class="span3">
+                            <fieldset name="belt_choice" form="selection_form">
+                                <span ng-repeat="belt in range.belt">
+                                    <input type="radio" ng-model="form.belt.type" ui-jq="button" name="belt_choice" id="{{belt.type}}" value="{{belt.name}}">
+                                    <!--<label for="{{belt.name}}"><img ng-src="img/2.3-{{belt.name}}.png" class="selector option"></label>-->
+                                    <label ng-model="form.belt.type" for="{{belt.type}}"><div class="icons-sprite {{belt.type}}"></div></label>
+                                </span>
+                            </fieldset>
+                        </div>
+                        <div class="span1">
+                            <fieldset name="belt_fabric_choice" form="selection_form">
+                                <span ng-repeat="belt_fabric in range.belt_fabric">
+                                    <input type="radio" ng-model="form.belt.fabric" ui-jq="button" name="belt_fabric_choice" id="belt_{{belt_fabric.type}}" value="{{belt_fabric.type}}">
+                                    <label for="belt_{{belt_fabric.type}}"><img class="selector option fabric{{belt_fabric.type}}"></label>
+                                </span>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab-extras">
+                        <div class="span3">
+                            <!--<fieldset name="trim_choice" <button ng-click="save()" ng-disabled="isSaveDisabled()">Save</button>>-->
+                                <!--&lt;!&ndash;<legend>Choose trims:</legend>&ndash;&gt;-->
+                                <!--<input type="checkbox" name="trim" id="trim-01" value="trim-01">-->
+                                <!--<label for="trim-01"><img src="img/2.3-trim-01.png" class="selector option"></label>-->
+                                <!--<input type="checkbox" name="trim" id="trim-02" value="trim-02">-->
+                                <!--<label for="trim-02"><img src="img/2.3-trim-02.png" class="selector option"></label>-->
+                                <!--<input type="checkbox" name="trim" id="trim-03" value="trim-03">-->
+                                <!--<label for="trim-03"><img src="img/2.3-trim-03.png" class="selector option"></label>-->
+                                <!--<input type="checkbox" name="trim" id="trim-04" value="trim-04">-->
+                                <!--<label for="trim-04"><img src="img/2.3-trim-04.png" class="selector option"></label>-->
+                            <!--</fieldset>-->
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab-sizing">
+                        <div class="btn-group" data-toggle="buttons-checkbox">
+                            <legend>Choose a standard size:</legend>
+                            <select>
+                                <option ng-repeat="size in range.sizes">Size {{size}}</option>
+                            </select>
+                            <legend>or custom measurements:</legend>
+                            todo - how do we enter these details?
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br> <!-- TODO - get rid of this with styling -->
+<div class="row">
+    <div class="span4 offset1  tabbable tabs-below">
+        <ul class="nav nav-tabs">
+            <!--<li class="active"><a href="#tab-silouette" data-toggle="tab">silouette</a></li>-->
+            <!--<li><a href="#tab-fabric" data-toggle="tab">fabric</a></li>-->
+            <li class="active"><a href="#tab-main" data-toggle="tab">Main View</a></li>
+            <li><a href="#tab-legs" data-toggle="tab">Rotate Test</a></li>
+            <li><a href="#tab-nolegs" data-toggle="tab">Rotate Test (legless)</a></li>
+        </ul>
+    </div>
+
+    <div class="span6 offset1" style="text-align: center">
+        <p>
+            <a class="btn" id="review-dress" data-toggle="modal" href="#reviewModal">Review my choices</a>
+            <button form="selection_form" ng-click="cancel()" ng-disabled="isCancelDisabled()">Cancel</button><!--<a class="btn" data-toggle="modal" href="#resetModal">Reset</a>-->
+            <button form="selection_form" ng-click="save()" ng-disabled="isSaveDisabled()">Save</button><!--<a class="btn" id="save-dress" href="#">Add to bag &raquo;</a>-->
+        </p>
+    </div>
+</div>
+<!--<hr/>-->
+<!--Debug View:-->
+<!--<pre>form={{form}}</pre>-->
+<!--<pre>master={{master}}</pre>-->
+</div>
+</div> <!-- /loading -->
+</div> <!-- /container -->

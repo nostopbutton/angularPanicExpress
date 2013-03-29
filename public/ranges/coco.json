@@ -4,86 +4,85 @@
     "price": 1600,
     "strapline": "use the buttons below to customise your dress",
     "sizes": [1,2,3,4,5],
-    "views": ["front", "left", "back", "right"],
-
+    "views": ["view-front", "view-left", "view-back", "view-right"],
     "default": {
         "view": "front",
 
         "bodice": {
-            "type": "bodice-01",
-            "fabric": "c01"
+            "type": "bod-001",
+            "fabric": "001"
         },
         "skirt": {
-            "type": "skirt-01",
-            "fabric": "c01"
+            "type": "skt-001",
+            "fabric": "001"
         },
         "sleeves": {
-            "type": "sleeves-01",
-            "fabric": "c01"
+            "type": "slv-001",
+            "fabric": "001"
         },
         "belt": {
-            "type": "belt-01",
-            "fabric": "c03"
+            "type": "blt-001",
+            "fabric": "003"
         }
      },
 
     "bodice": [
-        {"name": "bodice-01", "type": "bodice-01"},
-        {"name": "bodice-02", "type": "bodice-02"},
-        {"name": "bodice-03", "type": "bodice-03"},
-        {"name": "bodice-04", "type": "bodice-04"},
-        {"name": "bodice-05", "type": "bodice-05"},
-        {"name": "bodice-06", "type": "bodice-06"},
-        {"name": "bodice-07", "type": "bodice-07"},
-        {"name": "bodice-08", "type": "bodice-08"}
+        {"name": "bod-001", "type": "bod-001"},
+        {"name": "bod-002", "type": "bod-002"},
+        {"name": "bod-003", "type": "bod-003"},
+        {"name": "bod-004", "type": "bod-004"},
+        {"name": "bod-005", "type": "bod-005"},
+        {"name": "bod-006", "type": "bod-006"},
+        {"name": "bod-007", "type": "bod-007"},
+        {"name": "bod-008", "type": "bod-008"}
     ],
     "bodice_fabric": [
-        {"name": "red",     "type": "c01"},
-        {"name": "blue",    "type": "c02"},
-        {"name": "black",   "type": "c03"},
-        {"name": "green",   "type": "c04"}
+        {"name": "red",     "type": "001"},
+        {"name": "blue",    "type": "002"},
+        {"name": "black",   "type": "003"},
+        {"name": "green",   "type": "004"}
     ],
 
     "skirt": [
-        {"name": "skirt-01", "type": "skirt-01"},
-        {"name": "skirt-02", "type": "skirt-02"},
-        {"name": "skirt-03", "type": "skirt-03"},
-        {"name": "skirt-04", "type": "skirt-04"},
-        {"name": "skirt-05", "type": "skirt-05"},
-        {"name": "skirt-06", "type": "skirt-06"}
+        {"name": "skt-001", "type": "skt-001"},
+        {"name": "skt-002", "type": "skt-002"},
+        {"name": "skt-003", "type": "skt-003"},
+        {"name": "skt-004", "type": "skt-004"},
+        {"name": "skt-005", "type": "skt-005"},
+        {"name": "skt-006", "type": "skt-006"}
     ],
     "skirt_fabric": [
-        {"name": "red",     "type": "c01"},
-        {"name": "blue",    "type": "c02"},
-        {"name": "black",   "type": "c03"},
-        {"name": "green",   "type": "c04"}
+        {"name": "red",     "type": "001"},
+        {"name": "blue",    "type": "002"},
+        {"name": "black",   "type": "003"},
+        {"name": "green",   "type": "004"}
     ],
     "sleeves": [
-        {"name": "sleeves-00", "type": "sleeves-00"},
-        {"name": "sleeves-01", "type": "sleeves-01"},
-        {"name": "sleeves-02", "type": "sleeves-02"},
-        {"name": "sleeves-03", "type": "sleeves-03"},
-        {"name": "sleeves-04", "type": "sleeves-04"},
-        {"name": "sleeves-05", "type": "sleeves-05"},
-        {"name": "sleeves-06", "type": "sleeves-06"},
-        {"name": "sleeves-07", "type": "sleeves-07"}
+        {"name": "slv-000", "type": "slv-000"},
+        {"name": "slv-001", "type": "slv-001"},
+        {"name": "slv-002", "type": "slv-002"},
+        {"name": "slv-003", "type": "slv-003"},
+        {"name": "slv-004", "type": "slv-004"},
+        {"name": "slv-005", "type": "slv-005"},
+        {"name": "slv-006", "type": "slv-006"},
+        {"name": "slv-007", "type": "slv-007"}
     ],
     "sleeves_fabric": [
-        {"name": "red",     "type": "c01"},
-        {"name": "blue",    "type": "c02"},
-        {"name": "black",   "type": "c03"},
-        {"name": "green",   "type": "c04"}
+        {"name": "red",     "type": "001"},
+        {"name": "blue",    "type": "002"},
+        {"name": "black",   "type": "003"},
+        {"name": "green",   "type": "004"}
     ],
 
     "belt": [
-        {"name": "belt-00", "type": "belt-00"},
-        {"name": "belt-01", "type": "belt-01"}
+        {"name": "blt-000", "type": "blt-000"},
+        {"name": "blt-001", "type": "blt-001"}
     ],
     "belt_fabric": [
-        {"name": "red",     "type": "c01"},
-        {"name": "blue",    "type": "c02"},
-        {"name": "black",   "type": "c03"},
-        {"name": "green",   "type": "c04"}
+        {"name": "red",     "type": "001"},
+        {"name": "blue",    "type": "002"},
+        {"name": "black",   "type": "003"},
+        {"name": "green",   "type": "004"}
     ]
 
 }

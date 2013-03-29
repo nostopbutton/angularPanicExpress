@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html ng-app="myApp" class="no-js"> <!--<![endif]-->
+<!--<html lang="en" ng-app="myApp">-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Don't Panic - experience custom</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+<!--[if lte IE 8]>
+    <script>
+        // The ieshiv takes care of our ui.directives, bootstrap module directives and
+        // AngularJS's ng-view, ng-include, ng-pluralize and ng-switch directives.
+        // However, IF you have custom directives (yours or someone else's) then
+        // enumerate the list of tags in window.myCustomTags
+
+        // window.myCustomTags = [ 'yourDirective', 'somebodyElsesDirective' ]; // optional
+    </script>
+    <script src="js/lib/angular-ui/angular-ui-ieshiv.min.js"></script>
+    <![endif]-->
+
+<link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+<style>
+    body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+</style>
+<link rel="stylesheet" href="css/vendor/bootstrap-responsive.min.css">
+<link rel="stylesheet" href="css/vendor/angular-ui.min.css">
+<!--<link rel="stylesheet" href="css/normalize.css">--> <!-- TODO -  do I need normalize? -->
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/dress-sprite.css">
+<link rel="stylesheet" href="css/body-sprite.css">
+<link rel="stylesheet" href="css/icons-sprite.css">
+<link rel="stylesheet" href="css/silhouette-sprite.css">
+<link rel="stylesheet" href="css/collection-sprite.css">
+
+<!-- Added by me -->
+<link rel="stylesheet" type="text/css" href="css/theme.css"><!-- TODO - should extract footer-->
+<link rel="stylesheet" href="css/vendor/smoothness/jquery-ui-1.10.0.custom.min.css"> <!-- JQuery UI used to create radio buttons-->
+
+<!--<link href='http://fonts.googleapis.com/css?family=Arimo|La+Belle+Aurore|Aclonica|Krona+One|Nothing+You+Could+Do|Arizonia|Dancing+Script' rel='stylesheet' type='text/css'>-->
+
+<script  type="text/javascript" src="js/lib/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+
+<div id="myModal" class="modal hide fade smallModal">
+    <form id="signup-form" action="/signup" method="post" class="form-horizontal">
+        <div class="modal-header"><a data-dismiss="modal"  class="close"></a>
+            <h3>Sign Up Today</h3></div>
+        <div class="modal-body">
+            <fieldset>
+                <div class="control-group">
+                    <input type="text" name="username" placeholder="Username" class="input-xlarge uname"/>
+                    <!--<span id="imagePlaceHolder"></span>-->
+                </div>
+                <div class="control-group">
+                    <input type="text" name="email" placeholder="Email" class="input-xlarge"/>
+                </div>
+                <div class="control-group">
+                    <input type="password" name="password" placeholder="Password" class="input-xlarge"/>
+                </div>
+            </fieldset>
+        </div>
+        <div class="modal-footer"><a href="#" data-dismiss="modal" class="btn">Close</a>
+            <button class="btn btn-primary create-button" type="submit">Create Account</button>
+        </div>
+    </form>
+</div>
+<div id="loginModal" class="modal hide fade smallModal">
+    <form id="login-form" action="/login" method="post" class="form-horizontal">
+        <div class="modal-header">
+            <a data-dismiss="modal" class="close"></a>
+            <h3>Log In</h3>
+        </div>
+        <div class="modal-body">
+            <fieldset>
+                <div class="control-group">
+                    <input type="text" name="username" placeholder="Username" class="input-xlarge uname"/>
+                    <!--<span id="imagePlaceHolder"></span>-->
+                </div>
+                <div class="control-group">
+                    <input type="password" name="password" placeholder="Password" class="input-xlarge"/>
+                </div>
+            </fieldset>
+        </div>
+        <div class="modal-footer">
+            <a href="#" data-dismiss="modal" class="btn">Close</a>
+            <button class="btn btn-primary" type="submit">Log In</button>
+        </div>
+    </form>
+</div>
+<div id="resetModal" class="modal hide fade smallModal">
+    <form id="reset-form" action="/design" method="post" class="form-horizontal">
+        <div class="modal-header">
+            <a data-dismiss="modal" class="close"></a>
+            <h3>RESET</h3>
+        </div>
+        <div class="modal-body">
+            <p>Are you sure you want to throw away your design?</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" data-dismiss="modal" class="btn">Oops, no. Take me back!</a>
+            <button class="btn btn-primary" type="submit">Yes, chuck it away please.</button>
+        </div>
+    </form>
+</div>
+<div id="reviewModal" class="modal hide fade smallModal">
+    <form id="review-form" action="/review" method="post" class="form-horizontal">
+        <div class="modal-header">
+            <a data-dismiss="modal" class="close"></a>
+            <h3>Review my design</h3>
+        </div>
+        <div class="modal-body">
+            <div class="design-list">
+
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#" data-dismiss="modal" class="btn">Close</a>
+            <button class="btn btn-primary" type="submit">Add to bag &raquo;</button>
+        </div>
+    </form>
+</div>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class= "container">
+            <div class="pull-left">
+                <a class="logo" href="#home">Don't Panic The Cat</a>
+            </div>
+            <div class="pull-left">
+                <p class="handwriting">experience custom</p>
+            </div>
+            <div class="nav-collapse collapse">
+                <ul class="nav pull-right">
+                    <li><a data-toggle="modal" href="#myModal">SIGN-UP</a></li>
+                    <li><a data-toggle="modal" href="#loginModal">MY-ACCOUNT</a></li>
+                    <li><a href="#wishlist">MY-WISHLIST</a></li>
+                    <li><a href="#bag">MY-BAG</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="navbar-inverse">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav pull-left">
+                        <li><a href="#collection">Shop the collection</a></li>
+                        <li class="active handwriting"><a href="#design">DESIGN YOUR OWN</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#fabrics">Browse fabrics</a></li>
+                        <li><a href="#party">Host a party</a></li>
+                    </ul>
+                    <ul class="nav pull-right">
+                        <li><a href="#about">ABOUT US</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div ng-view></div>
+
+<!-- starts footer -->
+<footer id="footer">
+    <div class="container">
+        <div class="row info">
+            <div class="span6 residence">
+                <ul>
+                    <li>Somewhere in Discovery Bay, Lantau Island</li>
+                    <li>Hong Kong</li>
+                </ul>
+            </div>
+            <div class="span5 touch">
+                <ul>
+                    <li><strong>P.</strong> +852 123456</li>
+                    <li><strong>E.</strong><a href="#"> panic@thecat.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row credits">
+            <div class="span12">
+                <div class="row social">
+                    <div class="span12">
+                        <a href="#" class="facebook">
+                            <span class="socialicons ico1"></span>
+                            <span class="socialicons_h ico1h"></span>
+                        </a>
+                        <a href="#" class="twitter">
+                            <span class="socialicons ico2"></span>
+                            <span class="socialicons_h ico2h"></span>
+                        </a>
+                        <a href="#" class="gplus">
+                            <span class="socialicons ico3"></span>
+                            <span class="socialicons_h ico3h"></span>
+                        </a>
+                        <a href="#" class="flickr">
+                            <span class="socialicons ico4"></span>
+                            <span class="socialicons_h ico4h"></span>
+                        </a>
+                        <a href="#" class="pinterest">
+                            <span class="socialicons ico5"></span>
+                            <span class="socialicons_h ico5h"></span>
+                        </a>
+                        <a href="#" class="dribble">
+                            <span class="socialicons ico6"></span>
+                            <span class="socialicons_h ico6h"></span>
+                        </a>
+                        <a href="#" class="behance">
+                            <span class="socialicons ico7"></span>
+                            <span class="socialicons_h ico7h"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="row copyright">
+                    <div class="span12">
+                        <a href="#adminCollection">© 2013 nostopbutton. All rights reserved.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>-->
+<!--<script>window.jQuery || document.write('<script src="/lib/vendor/jquery-1.9.0.min.js"><\/script>')</script>-->
+
+<!--<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>-->
+<!--<script>window.jQuery.ui || document.write('<script src="/lib/vendor/jquery-ui-1.10.0.custom.min.js"><\/script>')</script>-->
+
+<!--<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>-->
+<!--<script>$.fn.modal || document.write('<script src="js/lib/vendor/bootstrap.min.js"><\/script>')</script>-->
+
+<!--&lt;!&ndash; Angular, CDN preferred - otherwise fallback. &ndash;&gt;-->
+<!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>-->
+<!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular-resource.min.js"></script>-->
+<!--<script>window.angular || document.write('<script src="js/lib/angular/angular.min.js"><\/script><script src="js/lib/angular/angular-resource.min.js"><\/script>')</script>-->
+
+
+
+
+
+
+<script type="text/javascript" src="/js/lib/vendor/jquery-1.9.0.min.js"></script>
+
+<script type="text/javascript" src="/js/lib/vendor/jquery-ui-1.10.0.custom.min.js"></script>
+
+<script src="js/lib/vendor/bootstrap.min.js"></script>
+<script src="js/lib/angular/angular.min.js"></script>
+<script src="js/lib/angular/angular-resource.min.js"></script>
+
+
+
+
+<script src="js/lib/angular-ui/angular-ui.min.js"></script>
+<!--<script src="js/lib/imagesloaded/jquery.imagesloaded.min.js"></script>-->
+
+<script src="js/plugins.js"></script>
+
+<script src="js/appRoutes.js"></script>
+<script src="js/services.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/directives.js"></script>
+
+<script src="js/main.js"></script>
+<!--<script>-->
+    <!--var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];-->
+    <!--(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];-->
+        <!--g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';-->
+        <!--s.parentNode.insertBefore(g,s)}(document,'script'));-->
+<!--</script>-->
+
+</body>
+</html>

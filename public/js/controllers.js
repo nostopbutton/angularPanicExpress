@@ -1,5 +1,26 @@
 'use strict';
 
+function StaticPageController($scope) {
+    // Nothing to do yet.
+}
+StaticPageController.$inject = ['$scope'];
+
+function CollectionController($scope, Range) {
+    $scope.ranges = Range.query();
+}
+CollectionController.$inject = ['$scope', 'Range'];
+
+function RangeDetailsController($scope, $routeParams, Range) {
+    $scope.ranges = Range.query();
+    $scope.range = Range.get({rangeId : $routeParams.rangeId});
+}
+RangeDetailsController.$inject = ['$scope', '$routeParams', 'Range'];
+
+function SilhouetteController($scope, Range) {
+    $scope.silhouettes = Range.querySilhouettes();
+}
+SilhouetteController.$inject = ['$scope', 'Range'];
+
 //// TODO - do I need this?
 //function AppCtrl($scope, $http) {
 //    $http({method: 'GET', url: '/api/name'}).
@@ -12,7 +33,7 @@
 //}
 //AppCtrl.$inject = ['$scope', '$http'];
 
-function DesignerController($scope, $routeParams, Range) {
+function DesignBuildController($scope, $routeParams, Range) {
     var master="";
     $scope.ranges = Range.query();
     $scope.range = Range.get({rangeId: $routeParams.rangeId},
@@ -23,32 +44,10 @@ function DesignerController($scope, $routeParams, Range) {
         },
         function (data) {   //failure
             alert("ooops");
-        });
-
-//    var master = {
-//        view: 'front',
-//
-//        bodice: {
-//            type: 'bodice-01',
-//            fabric: 'c01'
-//        },
-//        skirt: {
-//            type: 'skirt-01',
-//            fabric: 'c01'
-//        },
-//        sleeves: {
-//            type: 'sleeves-01',
-//            fabric: 'c01'
-//        },belt: {
-//            type: 'belt-01',
-//            fabric: 'c01'
-//        }
-//    }
-
+    });
 
     $scope.cancel = function() {
         $scope.form = angular.copy(master);
-//        $route.reload();
     };
 
     $scope.save = function() {
@@ -60,16 +59,10 @@ function DesignerController($scope, $routeParams, Range) {
         return angular.equals(master, $scope.form);
     };
 
-    $scope.isSaveDisabled = function() {
-        return $scope.form.$invalid || angular.equals(master, $scope.form);
-    };
+//    $scope.isSaveDisabled = function() {
+//        return $scope.form.$invalid || angular.equals(master, $scope.form);
+//    };
 
 //    $scope.cancel();
 }
-DesignerController.$inject = ['$scope', '$routeParams', 'Range'];
-
-
-function DesignSelectorController($scope, Range) {
-    $scope.ranges = Range.query();
-}
-DesignSelectorController.$inject = ['$scope', 'Range'];
+DesignBuildController.$inject = ['$scope', '$routeParams', 'Range'];

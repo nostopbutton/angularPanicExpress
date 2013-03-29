@@ -12,6 +12,8 @@ myServices.
 myServices.
     factory('Range', function($resource){
         return $resource('ranges/:rangeId.json', {}, {
-            query: {method:'GET', params:{rangeId:'ranges'}, isArray:true}
+            query: {method:'GET', params:{rangeId:'ranges'}, isArray:true},
+            querySilhouettes: {method:'GET', params:{rangeId:'silhouettes'}, isArray:true}
         });
     });
+
