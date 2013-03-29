@@ -1,25 +1,33 @@
 'use strict';
 
-function StaticPageController($scope, analytics) {
+function StaticPageController($scope) {
+//function StaticPageController($scope, analytics) {
     // Nothing to do yet.
 }
-StaticPageController.$inject = ['$scope', 'analytics'];
+StaticPageController.$inject = ['$scope'];
+//StaticPageController.$inject = ['$scope', 'analytics'];
 
-function CollectionController($scope, analytics, Range) {
+//function CollectionController($scope, analytics, Range) {
+function CollectionController($scope, Range) {
     $scope.ranges = Range.query();
 }
-CollectionController.$inject = ['$scope', 'analytics', 'Range'];
+//CollectionController.$inject = ['$scope', 'analytics', 'Range'];
+CollectionController.$inject = ['$scope', 'Range'];
 
-function RangeDetailsController($scope, analytics, $routeParams, Range) {
+//function RangeDetailsController($scope, analytics, $routeParams, Range) {
+function RangeDetailsController($scope, $routeParams, Range) {
     $scope.ranges = Range.query();
     $scope.range = Range.get({rangeId : $routeParams.rangeId});
 }
-RangeDetailsController.$inject = ['$scope', 'analytics', '$routeParams', 'Range'];
+RangeDetailsController.$inject = ['$scope', '$routeParams', 'Range'];
+//RangeDetailsController.$inject = ['$scope', 'analytics', '$routeParams', 'Range'];
 
-function SilhouetteController($scope, analytics, Range) {
+//function SilhouetteController($scope, analytics, Range) {
+function SilhouetteController($scope, Range) {
     $scope.silhouettes = Range.querySilhouettes();
 }
-SilhouetteController.$inject = ['$scope', 'analytics', 'Range'];
+SilhouetteController.$inject = ['$scope', 'Range'];
+//SilhouetteController.$inject = ['$scope', 'analytics', 'Range'];
 
 //// TODO - do I need this?
 //function AppCtrl($scope, $http) {
@@ -33,7 +41,8 @@ SilhouetteController.$inject = ['$scope', 'analytics', 'Range'];
 //}
 //AppCtrl.$inject = ['$scope', '$http'];
 
-function DesignBuildController($scope, analytics, $routeParams, Range) {
+function DesignBuildController($scope, $routeParams, Range) {
+//function DesignBuildController($scope, analytics, $routeParams, Range) {
     var master="";
     $scope.ranges = Range.query();
     $scope.range = Range.get({rangeId: $routeParams.rangeId},
@@ -65,4 +74,5 @@ function DesignBuildController($scope, analytics, $routeParams, Range) {
 
 //    $scope.cancel();
 }
-DesignBuildController.$inject = ['$scope', 'analytics', '$routeParams', 'Range'];
+DesignBuildController.$inject = ['$scope', '$routeParams', 'Range'];
+//DesignBuildController.$inject = ['$scope', 'analytics', '$routeParams', 'Range'];

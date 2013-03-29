@@ -3,6 +3,10 @@ var _gaq = _gaq || [];
 angular.module('analytics', []).run(['$http', function($http) {
 
 	_gaq.push(['_setAccount', 'UA-38964974-1']);
+
+    _gaq.push(['_setDomainName', 'none']); // TODO - remove sending Google Analytics for localhost
+    _gaq.push(['_setAllowLinker', true]);
+
 	_gaq.push(['_trackPageview']);
 
 	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
@@ -14,21 +18,28 @@ angular.module('analytics', []).run(['$http', function($http) {
 
 	$rootScope.$on('$viewContentLoaded', track);
 
-	var track = function() {
-		var path = convertPathToQueryString($location.path(), $routeParams)
-		$window._gaq.push(['_trackPageview', path]);
-	};
+        var track = function() {
+            console.log("path: "+path)
+            alert("tracking");
+            $window._gaq.push(['_trackPageview', $location.path()]);
+        };
+
+//	var track = function() {
+//		var path = convertPathToQueryString($location.path(), $routeParams)
+//        console.log("path: "+path)
+//		$window._gaq.push(['_trackPageview', path]);
+//	};
 	
-	var convertPathToQueryString = function(path, $routeParams) {
-		for (var key in $routeParams) {
-			var queryParam = '/' + $routeParams[key];
-			path = path.replace(queryParam, '');
-		}
-
-		var querystring = decodeURIComponent($.param($routeParams));
-
-		if (querystring === '') return path;
-
-		return path + "?" + querystring;
-	};
+//	var convertPathToQueryString = function(path, $routeParams) {
+//		for (var key in $routeParams) {
+//			var queryParam = '/' + $routeParams[key];
+//			path = path.replace(queryParam, '');
+//		}
+//
+//		var querystring = decodeURIComponent($.param($routeParams));
+//
+//		if (querystring === '') return path;
+//
+//		return path + "?" + querystring;
+//	};
 });
