@@ -1,0 +1,20 @@
+bodice	bod
+skirt	skt
+sleeves	slv
+belt	blt
+
+bod_001_000	0..1
+slv_000_000	0..1
+skt_003_000	0..1
+blt_001_000	0..*
+trm_001_111	0..*
+ssz_012
+csz_012_014
+
+Only attributes with scope "Global",
+input type "Dropdown"
+and Use To Create Configurable Product "Yes" are available.
+{{block type="catalog/product_list" category_id="4" template="catalogue/product/list.phtml"}}
+
+
+
