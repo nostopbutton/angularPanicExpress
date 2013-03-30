@@ -2,14 +2,16 @@
 
 function StaticPageController($rootScope, $window, $location, $routeParams) {// $rootScope, $window, $location, $routeParams
     // Nothing to do yet.
-    $rootScope.$on('$viewContentLoaded', track($window, $location, $routeParams));
+
+    $rootScope.$on('$viewContentLoaded',  track($window, $location, $routeParams));
 }
 
 StaticPageController.$inject = ['$rootScope', '$window', '$location', '$routeParams'];
 
 function CollectionController($scope, Range
         , $rootScope, $window, $location, $routeParams) {
-    $rootScope.$on('$viewContentLoaded', track($window, $location, $routeParams));
+
+    $rootScope.$on('$viewContentLoaded',  track($window, $location, $routeParams));
     $scope.ranges = Range.query();
 }
 
@@ -18,7 +20,8 @@ CollectionController.$inject = ['$scope', 'Range'
 
 function RangeDetailsController($scope, $routeParams, Range
         , $rootScope, $window, $location) {
-    $rootScope.$on('$viewContentLoaded', track($window, $location, $routeParams));
+
+    $rootScope.$on('$viewContentLoaded',  track($window, $location, $routeParams));
     $scope.ranges = Range.query();
     $scope.range = Range.get({rangeId : $routeParams.rangeId});
 }
@@ -28,7 +31,8 @@ RangeDetailsController.$inject = ['$scope', '$routeParams', 'Range'
 
 function SilhouetteController($scope, Range
         , $rootScope, $window, $location, $routeParams) {
-    $rootScope.$on('$viewContentLoaded', track($window, $location, $routeParams));
+
+    $rootScope.$on('$viewContentLoaded',  track($window, $location, $routeParams));
     $scope.silhouettes = Range.querySilhouettes();
 }
 
@@ -50,7 +54,8 @@ SilhouetteController.$inject = ['$scope', 'Range'
 
 function DesignBuildController($scope, $routeParams, Range
         , $rootScope, $window, $location) {
-    $rootScope.$on('$viewContentLoaded', track($window, $location, $routeParams));
+    
+    $rootScope.$on('$viewContentLoaded',  track($window, $location, $routeParams));
 
     var master="";
     $scope.ranges = Range.query();
@@ -86,8 +91,6 @@ function DesignBuildController($scope, $routeParams, Range
 
 DesignBuildController.$inject = ['$scope', '$routeParams', 'Range'
         , '$rootScope', '$window', '$location'];
-
-
 
 
 var track = function($window, $location, $routeParams) {

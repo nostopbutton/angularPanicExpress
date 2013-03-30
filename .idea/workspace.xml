@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b64e94d9-0cf5-48c7-bb07-ad7f7a065d4d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/analyticsService.js" afterPath="$PROJECT_DIR$/public/js/analyticsService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/appRoutes.js" afterPath="$PROJECT_DIR$/public/js/appRoutes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers.js" afterPath="$PROJECT_DIR$/public/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/partials/homePartial.html" afterPath="$PROJECT_DIR$/views/partials/homePartial.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/indexLayout.html" afterPath="$PROJECT_DIR$/views/indexLayout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="angularPanicExpress.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,7 +22,7 @@
     <file path="/fabrics.html" changelist="b64e94d9-0cf5-48c7-bb07-ad7f7a065d4d" time="1363565789965" ignored="false" />
     <file path="/gallery.html" changelist="b64e94d9-0cf5-48c7-bb07-ad7f7a065d4d" time="1363565841474" ignored="false" />
     <file path="/designOverview.html" changelist="b64e94d9-0cf5-48c7-bb07-ad7f7a065d4d" time="1363700358110" ignored="false" />
-    <file path="/controllers.js" changelist="b64e94d9-0cf5-48c7-bb07-ad7f7a065d4d" time="1364557878277" ignored="false" />
+    <file path="/controllers.js" changelist="b64e94d9-0cf5-48c7-bb07-ad7f7a065d4d" time="1364623131103" ignored="false" />
     <file path="/appRoutes.js" changelist="b64e94d9-0cf5-48c7-bb07-ad7f7a065d4d" time="1364553594859" ignored="false" />
     <file path="$USER_HOME$/dev/D3/mikedewar-getting_started_with_d3-bdfc34e/visualisations/d3-example.js" changelist="b64e94d9-0cf5-48c7-bb07-ad7f7a065d4d" time="1363691837744" ignored="false" />
     <file path="/services.js" changelist="b64e94d9-0cf5-48c7-bb07-ad7f7a065d4d" time="1364549795237" ignored="false" />
@@ -62,10 +57,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="64" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.0">
+            <state line="56" column="4" selection-start="1953" selection-end="1953" vertical-scroll-proportion="0.528914">
               <folding />
             </state>
           </provider>
@@ -80,17 +75,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homePartial.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="homePartial.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/partials/homePartial.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="58" selection-start="1445" selection-end="1445" vertical-scroll-proportion="0.61011904">
+            <state line="28" column="58" selection-start="1445" selection-end="1445" vertical-scroll-proportion="-17.083334">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="indexLayout.html.orig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/indexLayout.html.orig">
+      <file leaf-file-name="analyticsService.js.BACKUP.24148.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/analyticsService.js.BACKUP.24148.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -187,8 +182,8 @@
         <option value="$PROJECT_DIR$/views/indexLayout.html" />
         <option value="$PROJECT_DIR$/public/js/analyticsService.js" />
         <option value="$PROJECT_DIR$/public/js/appRoutes.js" />
-        <option value="$PROJECT_DIR$/public/js/controllers.js" />
         <option value="$PROJECT_DIR$/views/partials/homePartial.html" />
+        <option value="$PROJECT_DIR$/public/js/controllers.js" />
       </list>
     </option>
   </component>
@@ -498,13 +493,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="23" selection-start="135" selection-end="135" vertical-scroll-proportion="0.11968085">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -557,20 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/partials/designBuild.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="55" selection-start="2938" selection-end="2943" vertical-scroll-proportion="-22.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/indexLayout.html.orig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/indexLayout.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="0" selection-start="2423" selection-end="2423" vertical-scroll-proportion="127.0">
@@ -581,13 +555,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/analyticsService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="7" selection-start="1429" selection-end="1430" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/appRoutes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="0" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0">
@@ -595,16 +562,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/controllers.js">
+    <entry file="file://$PROJECT_DIR$/views/partials/designBuild.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="64" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.0">
+        <state line="53" column="55" selection-start="2938" selection-end="2943" vertical-scroll-proportion="-22.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/indexLayout.html.orig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-5.9396553">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/partials/homePartial.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="58" selection-start="1445" selection-end="1445" vertical-scroll-proportion="0.61011904">
+        <state line="28" column="58" selection-start="1445" selection-end="1445" vertical-scroll-proportion="-17.083334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/analyticsService.js.BACKUP.24148.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/analyticsService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="7" selection-start="1429" selection-end="1430" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="4" selection-start="1953" selection-end="1953" vertical-scroll-proportion="0.528914">
           <folding />
         </state>
       </provider>
