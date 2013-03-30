@@ -1,40 +1,9 @@
 'use strict';
 
-<<<<<<< HEAD
-function StaticPageController($scope) {
-//function StaticPageController($scope, analytics) {
-=======
 function StaticPageController($rootScope, $window, $location, $routeParams) {// $rootScope, $window, $location, $routeParams
->>>>>>> new_branch_name
     // Nothing to do yet.
     $rootScope.$on('$viewContentLoaded', track($window, $location, $routeParams));
 }
-<<<<<<< HEAD
-StaticPageController.$inject = ['$scope'];
-//StaticPageController.$inject = ['$scope', 'analytics'];
-
-//function CollectionController($scope, analytics, Range) {
-function CollectionController($scope, Range) {
-    $scope.ranges = Range.query();
-}
-//CollectionController.$inject = ['$scope', 'analytics', 'Range'];
-CollectionController.$inject = ['$scope', 'Range'];
-
-//function RangeDetailsController($scope, analytics, $routeParams, Range) {
-function RangeDetailsController($scope, $routeParams, Range) {
-    $scope.ranges = Range.query();
-    $scope.range = Range.get({rangeId : $routeParams.rangeId});
-}
-RangeDetailsController.$inject = ['$scope', '$routeParams', 'Range'];
-//RangeDetailsController.$inject = ['$scope', 'analytics', '$routeParams', 'Range'];
-
-//function SilhouetteController($scope, analytics, Range) {
-function SilhouetteController($scope, Range) {
-    $scope.silhouettes = Range.querySilhouettes();
-}
-SilhouetteController.$inject = ['$scope', 'Range'];
-//SilhouetteController.$inject = ['$scope', 'analytics', 'Range'];
-=======
 
 StaticPageController.$inject = ['$rootScope', '$window', '$location', '$routeParams'];
 
@@ -43,6 +12,7 @@ function CollectionController($scope, Range
     $rootScope.$on('$viewContentLoaded', track($window, $location, $routeParams));
     $scope.ranges = Range.query();
 }
+
 CollectionController.$inject = ['$scope', 'Range'
         , '$rootScope', '$window', '$location', '$routeParams'];
 
@@ -52,6 +22,7 @@ function RangeDetailsController($scope, $routeParams, Range
     $scope.ranges = Range.query();
     $scope.range = Range.get({rangeId : $routeParams.rangeId});
 }
+
 RangeDetailsController.$inject = ['$scope', '$routeParams', 'Range'
         , '$rootScope', '$window', '$location', '$routeParams'];
 
@@ -60,9 +31,9 @@ function SilhouetteController($scope, Range
     $rootScope.$on('$viewContentLoaded', track($window, $location, $routeParams));
     $scope.silhouettes = Range.querySilhouettes();
 }
+
 SilhouetteController.$inject = ['$scope', 'Range'
         , '$rootScope', '$window', '$location', '$routeParams'];
->>>>>>> new_branch_name
 
 //// TODO - do I need this?
 //function AppCtrl($scope, $http) {
@@ -76,14 +47,11 @@ SilhouetteController.$inject = ['$scope', 'Range'
 //}
 //AppCtrl.$inject = ['$scope', '$http'];
 
-<<<<<<< HEAD
-function DesignBuildController($scope, $routeParams, Range) {
-//function DesignBuildController($scope, analytics, $routeParams, Range) {
-=======
+
 function DesignBuildController($scope, $routeParams, Range
         , $rootScope, $window, $location) {
     $rootScope.$on('$viewContentLoaded', track($window, $location, $routeParams));
->>>>>>> new_branch_name
+
     var master="";
     $scope.ranges = Range.query();
     $scope.range = Range.get({rangeId: $routeParams.rangeId},
@@ -115,10 +83,7 @@ function DesignBuildController($scope, $routeParams, Range
 
 //    $scope.cancel();
 }
-<<<<<<< HEAD
-DesignBuildController.$inject = ['$scope', '$routeParams', 'Range'];
-//DesignBuildController.$inject = ['$scope', 'analytics', '$routeParams', 'Range'];
-=======
+
 DesignBuildController.$inject = ['$scope', '$routeParams', 'Range'
         , '$rootScope', '$window', '$location'];
 
@@ -143,4 +108,3 @@ var convertPathToQueryString = function(path, $routeParams) {
 
     return path + "?" + querystring;
 };
->>>>>>> new_branch_name
