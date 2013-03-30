@@ -13,7 +13,7 @@
 
 
 // Declare app level module which depends on filters, and services
-angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 'ui']).
+angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 'ui', 'analytics']).
     config(['$routeProvider', function($routeProvider) {
         $routeProvider.when(
             '/', {templateUrl: 'partials/homePartial.html', controller: StaticPageController});

@@ -79,8 +79,9 @@
                                 <span ng-repeat="bodice in range.bodice">
                                     <input type="radio" ng-model="form.bodice.type" ui-jq="button" name="bodice_choice" id="{{bodice.type}}" value="{{bodice.type}}">
                                     <!--<label ng-model="form.bodice.type" for="{{bodice.name}}"><img ng-src="img/2.3-{{bodice.name}}.png" class="selector option"></label>-->
-                                    <label ng-model="form.bodice.type" for="{{bodice.type}}"><div class="icons-sprite {{bodice.type}}"></div></label>
-
+                                    <label for="{{bodice.type}}" onClick="_gaq.push(['_trackEvent', 'Design Build', 'bodice', '{{bodice.type}}']);">
+                                        <div class="icons-sprite {{bodice.type}}"></div>
+                                    </label>
                                 </span>
                             </fieldset>
                         </div>
@@ -88,7 +89,9 @@
                             <fieldset name="bodice_fabric_choice" form="selection_form">
                                 <span ng-repeat="bodice_fabric in range.bodice_fabric">
                                     <input type="radio" ng-model="form.bodice.fabric" ui-jq="button" name="bodice_fabric_choice" id="bodice_{{bodice_fabric.type}}" value="{{bodice_fabric.type}}">
-                                    <label for="bodice_{{bodice_fabric.type}}"><img class="selector option fabric{{bodice_fabric.type}}"></label>
+                                    <label for="bodice_{{bodice_fabric.type}}" onClick="_gaq.push(['_trackEvent', 'Design Build', 'bodice_fabric', '{{bodice_fabric.type}}']);">
+                                        <img class="selector option fabric{{bodice_fabric.type}}">
+                                    </label>
                                 </span>
                             </fieldset>
                         </div>
@@ -99,7 +102,9 @@
                                 <span ng-repeat="skirt in range.skirt">
                                     <input type="radio" ng-model="form.skirt.type" ui-jq="button" name="skirt_choice" id="{{skirt.type}}" value="{{skirt.name}}">
                                     <!--<label for="{{skirt.name}}"><img ng-src="img/2.3-{{skirt.name}}.png" class="selector option"></label>-->
-                                    <label ng-model="form.skirt.type" for="{{skirt.type}}"><div class="icons-sprite {{skirt.type}}"></div></label>
+                                    <label for="{{skirt.type}}" onClick="_gaq.push(['_trackEvent', 'Design Build', 'skirt', '{{skirt.type}}']);">
+                                        <div class="icons-sprite {{skirt.type}}"></div>
+                                    </label>
                                 </span>
                             </fieldset>
                         </div>
@@ -107,7 +112,9 @@
                             <fieldset name="skirt_fabric_choice" form="selection_form">
                                 <span ng-repeat="skirt_fabric in range.skirt_fabric">
                                     <input type="radio" ng-model="form.skirt.fabric" ui-jq="button" name="skirt_fabric_choice" id="skirt_{{skirt_fabric.type}}" value="{{skirt_fabric.type}}">
-                                    <label for="skirt_{{skirt_fabric.type}}"><img class="selector option fabric{{skirt_fabric.type}}"></label>
+                                    <label for="skirt_{{skirt_fabric.type}}" onClick="_gaq.push(['_trackEvent', 'Design Build', 'skirt_fabric', '{{skirt_fabric.type}}']);">
+                                        <img class="selector option fabric{{skirt_fabric.type}}">
+                                    </label>
                                 </span>
                             </fieldset>
                         </div>
@@ -118,7 +125,9 @@
                                 <span ng-repeat="sleeves in range.sleeves">
                                     <input type="radio" ng-model="form.sleeves.type" ui-jq="button" name="sleeves_choice" id="{{sleeves.type}}" value="{{sleeves.name}}">
                                     <!--<label for="{{sleeves.name}}"><img ng-src="img/2.3-{{sleeves.name}}.png" class="selector option"></label>-->
-                                    <label ng-model="form.sleeves.type" for="{{sleeves.type}}"><div class="icons-sprite {{sleeves.type}}"></div></label>
+                                    <label for="{{sleeves.type}}" onClick="_gaq.push(['_trackEvent', 'Design Build', 'sleeves', '{{sleeves.type}}']);">
+                                        <div class="icons-sprite {{sleeves.type}}"></div>
+                                    </label>
                                 </span>
                             </fieldset>
                         </div>
@@ -126,7 +135,9 @@
                             <fieldset name="sleeves_fabric_choice" form="selection_form">
                                 <span ng-repeat="sleeves_fabric in range.sleeves_fabric">
                                     <input type="radio" ng-model="form.sleeves.fabric" ui-jq="button" name="sleeves_fabric_choice" id="sleeves_{{sleeves_fabric.type}}" value="{{sleeves_fabric.type}}">
-                                    <label for="sleeves_{{sleeves_fabric.type}}"><img class="selector option fabric{{sleeves_fabric.type}}"></label>
+                                    <label for="sleeves_{{sleeves_fabric.type}}"  onClick="_gaq.push(['_trackEvent', 'Design Build', 'sleeves_fabric', '{{sleeves_fabric.type}}']);">
+                                        <img class="selector option fabric{{sleeves_fabric.type}}">
+                                    </label>
                                 </span>
                             </fieldset>
                         </div>
@@ -137,7 +148,9 @@
                                 <span ng-repeat="belt in range.belt">
                                     <input type="radio" ng-model="form.belt.type" ui-jq="button" name="belt_choice" id="{{belt.type}}" value="{{belt.name}}">
                                     <!--<label for="{{belt.name}}"><img ng-src="img/2.3-{{belt.name}}.png" class="selector option"></label>-->
-                                    <label ng-model="form.belt.type" for="{{belt.type}}"><div class="icons-sprite {{belt.type}}"></div></label>
+                                    <label for="{{belt.type}}" onClick="_gaq.push(['_trackEvent', 'Design Build', 'belt', '{{belt.type}}']);">
+                                        <div class="icons-sprite {{belt.type}}"></div>
+                                    </label>
                                 </span>
                             </fieldset>
                         </div>
@@ -145,7 +158,9 @@
                             <fieldset name="belt_fabric_choice" form="selection_form">
                                 <span ng-repeat="belt_fabric in range.belt_fabric">
                                     <input type="radio" ng-model="form.belt.fabric" ui-jq="button" name="belt_fabric_choice" id="belt_{{belt_fabric.type}}" value="{{belt_fabric.type}}">
-                                    <label for="belt_{{belt_fabric.type}}"><img class="selector option fabric{{belt_fabric.type}}"></label>
+                                    <label for="belt_{{belt_fabric.type}}" onClick="_gaq.push(['_trackEvent', 'Design Build', 'belt_fabric', '{{belt_fabric.type}}']);">
+                                        <img class="selector option fabric{{belt_fabric.type}}">
+                                    </label>
                                 </span>
                             </fieldset>
                         </div>
@@ -194,9 +209,9 @@
 
     <div class="span6 offset1" style="text-align: center">
         <p>
-            <a class="btn" id="review-dress" data-toggle="modal" href="#reviewModal">Review my choices</a>
-            <button form="selection_form" ng-click="cancel()" ng-disabled="isCancelDisabled()">Cancel</button><!--<a class="btn" data-toggle="modal" href="#resetModal">Reset</a>-->
-            <button form="selection_form" ng-click="save()" ng-disabled="isSaveDisabled()">Save</button><!--<a class="btn" id="save-dress" href="#">Add to bag &raquo;</a>-->
+            <a class="btn" id="review-dress" data-toggle="modal" href="#reviewModal" onClick="_gaq.push(['_trackEvent', 'Design Build', 'review']);">Review my choices</a>
+            <button form="selection_form" ng-click="cancel()" ng-disabled="isCancelDisabled()" onClick="_gaq.push(['_trackEvent', 'Design Build', 'cancel']);">Cancel</button><!--<a class="btn" data-toggle="modal" href="#resetModal">Reset</a>-->
+            <button form="selection_form" ng-click="save()" ng-disabled="isSaveDisabled()" onClick="_gaq.push(['_trackEvent', 'Design Build', 'save']);">Save</button><!--<a class="btn" id="save-dress" href="#">Add to bag &raquo;</a>-->
         </p>
     </div>
 </div>

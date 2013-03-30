@@ -1,25 +1,36 @@
 'use strict';
 
-function StaticPageController($scope) {
+function StaticPageController($rootScope, $window, $location, $routeParams) {// $rootScope, $window, $location, $routeParams
     // Nothing to do yet.
+    $rootScope.$on('$viewContentLoaded', track($window, $location, $routeParams));
 }
-StaticPageController.$inject = ['$scope'];
 
-function CollectionController($scope, Range) {
+StaticPageController.$inject = ['$rootScope', '$window', '$location', '$routeParams'];
+
+function CollectionController($scope, Range
+        , $rootScope, $window, $location, $routeParams) {
+    $rootScope.$on('$viewContentLoaded', track($window, $location, $routeParams));
     $scope.ranges = Range.query();
 }
-CollectionController.$inject = ['$scope', 'Range'];
+CollectionController.$inject = ['$scope', 'Range'
+        , '$rootScope', '$window', '$location', '$routeParams'];
 
-function RangeDetailsController($scope, $routeParams, Range) {
+function RangeDetailsController($scope, $routeParams, Range
+        , $rootScope, $window, $location) {
+    $rootScope.$on('$viewContentLoaded', track($window, $location, $routeParams));
     $scope.ranges = Range.query();
     $scope.range = Range.get({rangeId : $routeParams.rangeId});
 }
-RangeDetailsController.$inject = ['$scope', '$routeParams', 'Range'];
+RangeDetailsController.$inject = ['$scope', '$routeParams', 'Range'
+        , '$rootScope', '$window', '$location', '$routeParams'];
 
-function SilhouetteController($scope, Range) {
+function SilhouetteController($scope, Range
+        , $rootScope, $window, $location, $routeParams) {
+    $rootScope.$on('$viewContentLoaded', track($window, $location, $routeParams));
     $scope.silhouettes = Range.querySilhouettes();
 }
-SilhouetteController.$inject = ['$scope', 'Range'];
+SilhouetteController.$inject = ['$scope', 'Range'
+        , '$rootScope', '$window', '$location', '$routeParams'];
 
 //// TODO - do I need this?
 //function AppCtrl($scope, $http) {
@@ -33,7 +44,9 @@ SilhouetteController.$inject = ['$scope', 'Range'];
 //}
 //AppCtrl.$inject = ['$scope', '$http'];
 
-function DesignBuildController($scope, $routeParams, Range) {
+function DesignBuildController($scope, $routeParams, Range
+        , $rootScope, $window, $location) {
+    $rootScope.$on('$viewContentLoaded', track($window, $location, $routeParams));
     var master="";
     $scope.ranges = Range.query();
     $scope.range = Range.get({rangeId: $routeParams.rangeId},
@@ -65,4 +78,27 @@ function DesignBuildController($scope, $routeParams, Range) {
 
 //    $scope.cancel();
 }
-DesignBuildController.$inject = ['$scope', '$routeParams', 'Range'];
+DesignBuildController.$inject = ['$scope', '$routeParams', 'Range'
+        , '$rootScope', '$window', '$location'];
+
+
+
+
+var track = function($window, $location, $routeParams) {
+    console.log("in track");
+    var path = convertPathToQueryString($location.path(), $routeParams)
+    $window._gaq.push(['_trackPageview', path]);
+};
+
+var convertPathToQueryString = function(path, $routeParams) {
+    for (var key in $routeParams) {
+        var queryParam = '/' + $routeParams[key];
+        path = path.replace(queryParam, '');
+    }
+
+    var querystring = decodeURIComponent($.param($routeParams));
+
+    if (querystring === '') return path;
+
+    return path + "?" + querystring;
+};
