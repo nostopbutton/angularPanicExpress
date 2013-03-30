@@ -13,8 +13,12 @@
 
 
 // Declare app level module which depends on filters, and services
+<<<<<<< HEAD
 //angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 'ui', 'analytics']).
 angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 'ui']).
+=======
+angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 'ui', 'analytics']).
+>>>>>>> new_branch_name
     config(['$routeProvider', function($routeProvider) {
         $routeProvider.when(
             '/', {templateUrl: 'partials/homePartial.html', controller: StaticPageController});
